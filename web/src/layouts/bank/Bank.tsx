@@ -3,6 +3,7 @@ import Navbar from '@/layouts/bank/components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from '@/layouts/bank/pages/dashboard/Dashboard';
 import Accounts from '@/layouts/bank/pages/accounts/Accounts';
+import Logs from '@/layouts/bank/pages/logs/Logs';
 import ModalsProvider from '@/components/ModalsProvider';
 import { useSetModalContainer } from '@/state/modals';
 import { useBankVisibility, useSetBankVisibility } from '@/state/visibility';
@@ -55,6 +56,7 @@ const Bank: React.FC = () => {
               <Route path='/' element={<Dashboard />} />
               <Route path='/accounts' element={<Accounts />} />
               <Route path='/accounts/manage-access/:accountId' element={<ManageAccess />} />
+              <Route path='/logs' element={<Logs />} />
             </Routes>
           </ModalsProvider>
         </div>

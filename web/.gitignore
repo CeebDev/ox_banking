@@ -1,5 +1,5 @@
 # Logs
-logs
+# logs
 !src/layouts/bank/views/logs
 *.log
 npm-debug.log*

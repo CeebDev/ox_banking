@@ -12,6 +12,15 @@ export interface Transaction {
   message?: string;
 }
 
+export interface TransactionDetails {
+  date: string;
+  amount: number;
+  type: 'inbound' | 'outbound';
+  message?: string;
+  fromId?: string;
+  toId?: string;
+}
+
 export interface DashboardData {
   balance: number;
   overview?: {
@@ -26,6 +35,12 @@ export interface DashboardData {
     issuer: string;
     date: string;
   }[];
+}
+
+export interface LogsData {
+  transactions: TransactionDetails[];
+  totalPages: number;
+  currentPage: number;
 }
 
 export interface AccessTableData {
