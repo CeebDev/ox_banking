@@ -1,5 +1,5 @@
 import React from 'react';
-import { CreditCard, HistoryIcon, LayoutDashboard, LogOut } from 'lucide-react';
+import { CreditCard, LayoutDashboard, LogOut } from 'lucide-react';
 import ThemeSwitcher from '@/layouts/bank/components/ThemeSwitcher';
 import NavLink from '@/layouts/bank/components/NavLink';
 import NavItem from '@/layouts/bank/components/NavItem';
@@ -15,7 +15,6 @@ const Navbar: React.FC = () => {
       <div className="flex flex-col items-center justify-center">
         <NavLink icon={LayoutDashboard} label={locales.dashboard} path="/" />
         <NavLink icon={CreditCard} label={locales.accounts} path="/accounts" />
-        <NavLink icon={HistoryIcon} label={locales.logs} path="/logs" />
       </div>
 
       <div className="flex flex-col items-center justify-center">

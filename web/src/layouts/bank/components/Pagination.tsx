@@ -20,11 +20,11 @@ const BaseCard: React.FC<Props> = (props) => {
       </button>
 
       <div>
-        <span className='text-gray-600 dark:text-gray-200 mx-1 cursor-pointer'>1</span>
-        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-1 cursor-pointer">2</span>
-        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-1 cursor-pointer">3</span>
-        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-1 cursor-pointer">...</span>
-        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-1 cursor-pointer">{props.totalPages}</span>
+        <span className='text-gray-600 dark:text-gray-200 mx-2 cursor-pointer'>1</span>
+        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-2 cursor-pointer">2</span>
+        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-2 cursor-pointer">3</span>
+        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-2 cursor-pointer">...</span>
+        <span className="text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 mx-2 cursor-pointer">{props.totalPages}</span>
       </div>
       <button className="flex items-center mr-2 text-gray-500 hover:text-gray-600 dark:hover:text-gray-200 focus:outline-none cursor-pointer">
         Next

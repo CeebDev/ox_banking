@@ -9,10 +9,12 @@ import { useModal } from '@/components/ModalsProvider';
 import { useActiveAccount } from '@/state/accounts/accounts';
 import locales from '@/locales';
 import TransferModal from '@/layouts/bank/pages/accounts/modals/TransferModal';
+import { useNavigate } from 'react-router-dom';
 
 const AccountDetails: React.FC = () => {
   const modal = useModal();
   const account = useActiveAccount()!;
+  const navigate = useNavigate();
 
   return (
     <BaseCard title="Details" icon={ScanText} className="flex-1">
@@ -78,7 +80,7 @@ const AccountDetails: React.FC = () => {
           icon={Repeat}
           onClick={() => modal.open({ title: locales.transfer, children: <TransferModal account={account} /> })}
         />
-        <AccountButton label={locales.logs} icon={History} />
+        <AccountButton label={locales.logs} icon={History} onClick={() => navigate(`/accounts/logs/${account.id}`)} />
       </div>
     </BaseCard>
   );

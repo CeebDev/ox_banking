@@ -3,7 +3,6 @@ import Navbar from '@/layouts/bank/components/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Dashboard from '@/layouts/bank/pages/dashboard/Dashboard';
 import Accounts from '@/layouts/bank/pages/accounts/Accounts';
-import Logs from '@/layouts/bank/pages/logs/Logs';
 import ModalsProvider from '@/components/ModalsProvider';
 import { useSetModalContainer } from '@/state/modals';
 import { useBankVisibility, useSetBankVisibility } from '@/state/visibility';
@@ -13,6 +12,7 @@ import { fetchNui } from '@/utils/fetchNui';
 import { Character } from '~/typings';
 import { useSetCharacter } from '@/state/character';
 import ManageAccess from '@/layouts/bank/pages/accounts/manage-access/ManageAccess';
+import Logs from '@/layouts/bank/pages/accounts/logs/Logs';
 
 const Bank: React.FC = () => {
   const setCharacter = useSetCharacter();
@@ -56,7 +56,7 @@ const Bank: React.FC = () => {
               <Route path='/' element={<Dashboard />} />
               <Route path='/accounts' element={<Accounts />} />
               <Route path='/accounts/manage-access/:accountId' element={<ManageAccess />} />
-              <Route path='/logs' element={<Logs />} />
+              <Route path='/accounts/logs/:accountId' element={<Logs />} />
             </Routes>
           </ModalsProvider>
         </div>
